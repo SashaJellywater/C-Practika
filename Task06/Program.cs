@@ -3,9 +3,9 @@ Console.WriteLine("введите целое число");
 int number = Convert.ToInt32(Console.ReadLine());
 if(number %2 == 0)
 {
-    Console.WriteLine($" Ура! число {number} чётное");
+    Console.WriteLine($"число {number} является чётным");
 }
 else
 {
-    Console.WriteLine($" О нет! число {number} нечётное");
+    Console.WriteLine($"число {number} не является чётным");
 }
