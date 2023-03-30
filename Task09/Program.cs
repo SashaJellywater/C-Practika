@@ -17,8 +17,8 @@ Console.WriteLine($"Наибольшая цифра числа => {maxDigit}");
 
 int MaxDigit(int numRandom) // numRandom = numberRandom
 {
-    int firstDigit = numberRandom / 10;
-    int secondDigit = numberRandom % 10;
+    int firstDigit = numRandom / 10;
+    int secondDigit = numRandom % 10;
     int maxDigit = firstDigit > secondDigit ? firstDigit : secondDigit;
     return maxDigit;
 
