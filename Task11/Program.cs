@@ -1,5 +1,6 @@
 ﻿// // Напашите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа
 // int numberRandom = new Random().Next(100, 1000); 
+
 // Console.WriteLine($"Случайное трёхзначное число => {numberRandom}");
 // int firstDigit= numberRandom /100 ;
 // int secondDigit = numberRandom % 10;

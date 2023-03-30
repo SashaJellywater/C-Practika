@@ -5,6 +5,9 @@ int firstNumber = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите второе целое число");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 
+int result = Multiple(firstNumber, secondNumber);
+WriteResult(result);
+
 int Multiple(int num1, int num2)
 {
     return num1 % num2;
@@ -17,8 +20,6 @@ void WriteResult(int multiple)
     }
     else
     {
-          Console.WriteLine($"не кратно, остаток = > {multiple}");
+        Console.WriteLine($"не кратно, остаток = > {multiple}");
     }
 }
-int result = Multiple(firstNumber, secondNumber);
-WriteResult(result);
