@@ -3,11 +3,12 @@
 // 456 -> 5
 // 782 -> 8
 // 918 -> 1
+//                              *** Моё решение ***
 int SecondDigit(int num)
 {
-    int noHundreds = num %100;
-    int noDozens = num%10;
-    int sec = (noHundreds -noDozens)/10;
+    int noHundreds = num % 100;
+    int noDozens = num % 10;
+    int sec = (noHundreds - noDozens) / 10;
     return sec;
 }
 
@@ -22,3 +23,4 @@ else
 {
     Console.WriteLine($"Число {number} не трёхзначное");
 }
+

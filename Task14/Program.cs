@@ -8,12 +8,12 @@ int firstNumber = Convert.ToInt32(Console.ReadLine());
 // int secondNumber = 23;
 Console.WriteLine("Введите второе число - делитель");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
-
-bool result = MultipleTwoNumbers(number, firstNumber, secondNumber);
+//          Is - приставка для булевых методов
+bool result = IsMultipleTwoNumbers(number, firstNumber, secondNumber);
 //если результат функции правдив(?) \/  если нет(:)\/ 
 Console.WriteLine(result ? "Число кратное" : "Число не кратное");
 
-bool MultipleTwoNumbers(int num, int firstNum, int secondNum)
+bool IsMultipleTwoNumbers(int num, int firstNum, int secondNum)
 {
     return num % firstNum == 0 && num % secondNum == 0;
 }
