@@ -9,5 +9,5 @@ Console.WriteLine($"число {first_number} является квадрато�
 }
 else 
 {
-Console.WriteLine($"число {first_number} не является квадратом числа {first_number}");
+Console.WriteLine($"число {first_number} не является квадратом числа {second_number}");
 }

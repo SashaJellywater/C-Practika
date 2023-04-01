@@ -4,10 +4,10 @@
 
 string Quarter(int quoterNumber)
 {
-    if (quoterNumber == 1) return "X > 0 && Y > 0";
-    if (quoterNumber == 2) return "X > 0 && Y < 0";
-    if (quoterNumber == 3) return "X < 0 && Y < 0";
-    if (quoterNumber == 4) return "X < 0 && Y > 0";
+    if (quoterNumber == 1) return "X > 0 и Y > 0";
+    if (quoterNumber == 2) return "X > 0 и Y < 0";
+    if (quoterNumber == 3) return "X < 0 и Y < 0";
+    if (quoterNumber == 4) return "X < 0 и Y > 0";
     return "Неправильный номер четверти";
 }
 Console.Write("Введи  номер четверти ");

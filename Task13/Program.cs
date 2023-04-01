@@ -3,24 +3,60 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-//функция перехода в трехзначное число
-int ThreeDigitNumber(int numbers)
+//                              *** Моё решение ***
+// //функция перехода в трехзначное число
+// int ThreeDigitNumber(int numbers)
+// {
+// while (numbers>1000)
+// {
+//     numbers = numbers/10;
+// }
+// return numbers;
+// }
+// //вывода числа бул
+// bool IsTherdDigit (int enterNumber)
+// {
+//     return enterNumber > 99;
+// }
+
+// Console.WriteLine("введите число");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if (num >1000) num = ThreeDigitNumber(num);
+// int find = num%10;
+// bool result = IsTherdDigit(num);
+// Console.WriteLine(result ? $"третья цифра числа {find}" : "Третьей цифры нет");
+
+//                       ***Эталонное решение***
+//метод ввода числа
+int Prompt(string message)
 {
-while (numbers>1000)
-{
-    numbers = numbers/10;
+    Console.Write(message);
+    string value = Console.ReadLine();
+    int result = Convert.ToInt32(value);
+    return result;
 }
-return numbers;
-}
-//вывода числа бул
-bool IsTherdDigit (int enterNumber)
+//метод нахождения третьей цифры
+int GetThirdRank(int number)
 {
-    return enterNumber > 99;
+    while (number>999)
+    {
+        number/=10;
+    }
+    return number%10;
+}
+// метод результата
+bool ValidateNumber(int number)
+{
+    if (number <100)
+    {
+        Console.WriteLine("Третьей цифры нет");
+        return false;
+    }
+    return true;
 }
 
-Console.WriteLine("введите число");
-int num = Convert.ToInt32(Console.ReadLine());
-if (num >1000) num = ThreeDigitNumber(num);
-int find = num%10;
-bool result = IsTherdDigit(num);
-Console.WriteLine(result ? $"третья цифра числа {find}" : "Третьей цифры нет");
+int number = Prompt("Введите число > ");
+if (ValidateNumber(number))
+{
+    Console.WriteLine(GetThirdRank(number));
+}
