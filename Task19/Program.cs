@@ -9,8 +9,11 @@ int Prompt(string message)
 {
     Console.WriteLine(message);
     int newNum = Convert.ToInt32(Console.ReadLine());
-
-    while (newNum>100000 || newNum<9999 )
+    if (newNum<0)
+    {
+        newNum= -newNum;
+    }
+    while (newNum>100000 || newNum<9999 && newNum>1)
     {
         Console.WriteLine("Неправильно! Введите пятизначное число");
         newNum = Convert.ToInt32(Console.ReadLine());
