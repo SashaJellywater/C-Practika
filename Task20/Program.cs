@@ -16,8 +16,8 @@ int Prompt(string message)
 double Distance(int X1, int Y1, int X2, int Y2)
 {
     //функция Math.Sqrt - извлекает корень)
-    double root = Math.Sqrt((X2-X1)*(X2-X1)+(Y2-Y1)*(Y2-Y1));
-    double rootShort = Math.Round(root, 2, MidpointRounding.ToZero); 
+    double root = Math.Sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1));
+    double rootShort = Math.Round(root, 2, MidpointRounding.ToZero);
     return rootShort;
 }
 
