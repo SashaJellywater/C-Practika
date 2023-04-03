@@ -12,9 +12,9 @@ int Prompt(string message)
     return result;
 }
 
-double Distance(int X1, int Y1, int X2, int Y2, int Z1, int Z2)
-{
-    double root = Math.Sqrt((X2 - X1) * (X2 - X1) + (Y2 - Y1) * (Y2 - Y1) + (Z2 - Z1) * (Z2 - Z1));
+double Distance(int x1Coord, int y1Coord, int x2Coord, int y2Coord, int z1Coord, int z2Coord)
+{ 
+    double root = Math.Sqrt((x2Coord - x1Coord)*(x2Coord - x1Coord) + (y2Coord - y1Coord) * (y2Coord - y1Coord) + (z2Coord - z1Coord) * (z2Coord - z1Coord));
     double rootShort = Math.Round(root, 2, MidpointRounding.ToZero);
     return rootShort;
 }
