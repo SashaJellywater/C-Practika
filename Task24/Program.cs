@@ -20,4 +20,4 @@ int SumNumbers(int num)
 }
 int number = Prompt("Введите целое положительное число ");
 int result = SumNumbers(number);
-Console.WriteLine(result);
+Console.WriteLine($"Сумма чисел от 1 до {number} = {result}");

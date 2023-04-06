@@ -17,7 +17,10 @@ int FactorialNumbers(int num)
     int product = 1;
     for (int i = 1; i <= num; i++)
     {
-        product *= i;
+        checked
+        {
+            product *= i;
+        }
     }
     return product;
 }
