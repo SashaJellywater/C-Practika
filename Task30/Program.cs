@@ -22,6 +22,7 @@
 //     }
 // }
 // PrintArray(FillingArray(8));
+
 int[] array = new int[8];
 
 FillArray(array);
