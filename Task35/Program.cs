@@ -1,6 +1,11 @@
 ﻿// Задайте одномерный массив из 123 случайных чисел
 // Найдите количество элементов массива, значение которых лежат в отрезке от 10 до 99
-
+int Prompt(string message)
+{
+    Console.WriteLine(message);
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+    return userNumber;
+}
 int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
@@ -34,7 +39,10 @@ int FindElements(int[] arr, int min, int max)
     return count;
 }
 
-int[] array = CreateArrayRndInt(123, 1, 200);
+int sizeArray = Prompt("Введите количество элиментов массива");
+int minElement = Prompt("Введите минимальное значение элиментов массива");
+int maxElement = Prompt("Введите максимальное значение элиментов массива");
+int[] array = CreateArrayRndInt(sizeArray, minElement, maxElement);
 PrintArray(array);
 Console.WriteLine("Введите минимальное значение элементов");
 int numberMinimum = Convert.ToInt32(Console.ReadLine());

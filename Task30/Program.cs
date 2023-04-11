@@ -48,7 +48,7 @@ void PrintArray(int[] userArray)
         {
             Console.Write($"{userArray[i]}");
         }
-        else Console.Write($"{userArray[i]},");
+        else Console.Write($"{userArray[i]}, ");
     }
     Console.Write("]");
     Console.WriteLine();
