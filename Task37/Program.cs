@@ -16,7 +16,6 @@ int[] CreateArrayRndInt(int size, int min, int max)
         arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
-
 }
 void PrintArray(int[] arr)
 {
@@ -32,24 +31,24 @@ void PrintArray(int[] arr)
 int[] NewArray(int[] arr)
 {
     int newSize = arr.Length / 2;
-        if (arr.Length % 2 != 0)
-        {
-           newSize += 1;
-        }
-   int[] find = new int[newSize];
-        for (int i = 0; i < newSize; i++)
-        {
-          find[i] = arr[i] * arr[arr.Length - i - 1];
-        }
-    find[newSize-1]= arr[arr.Length/2];
+    if (arr.Length % 2 != 0)
+    {
+        newSize += 1;
+    }
+    int[] find = new int[newSize];
+    for (int i = 0; i < newSize; i++)
+    {
+        find[i] = arr[i] * arr[arr.Length - i - 1];
+    }
+    if (arr.Length % 2 != 0) find[newSize - 1] = arr[arr.Length / 2];
     return find;
 }
 
-int si = Prompt("размер");
-int mi = Prompt("mini");
-int ma = Prompt("maxi");
-int[] arrr = CreateArrayRndInt(si, mi, ma);
-int[] prod = NewArray(arrr);
-PrintArray(arrr);
+int newArraySize = Prompt("Укажите размер массива");
+int minElement = Prompt("Укажите минимальное значение для элемента массива");
+int maxElement = Prompt("Укажите максимальное значение для элемента массива");
+int[] userArray = CreateArrayRndInt(newArraySize, minElement, maxElement);
+int[] productArray = NewArray(userArray);
+PrintArray(userArray);
 Console.Write(" -> ");
-PrintArray(prod);
+PrintArray(productArray);

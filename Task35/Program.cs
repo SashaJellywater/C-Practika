@@ -15,9 +15,7 @@ int[] CreateArrayRndInt(int size, int min, int max)
         arr[i] = rnd.Next(min, max + 1);
     }
     return arr;
-
 }
-
 void PrintArray(int[] arr)
 {
     Console.Write("[");
@@ -26,7 +24,7 @@ void PrintArray(int[] arr)
         if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
         else Console.Write($"{arr[i]}");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
 
 int FindElements(int[] arr, int min, int max)
