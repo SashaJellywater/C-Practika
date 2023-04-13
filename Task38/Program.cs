@@ -7,7 +7,7 @@ double[] CreateArrayRndDouble(int size, int min, int max)
     Random rnd = new Random();
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = rnd.NextDouble() * (max-min)+min;
+        arr[i] = rnd.NextDouble() * (max - min) + min;
     }
     return arr;
 }
@@ -21,30 +21,28 @@ void PrintArrayDouble(double[] arr)
     }
     Console.Write("]");
 }
-double FindMaxElement(double[]arr)
+double FindMaxElement(double[] arr)
 {
-    int i = 0;
-    double maxElement= arr[i];
-    for(i=1; i<arr.Length; i++)
+    double maxElement = arr[0];
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i]> maxElement) maxElement = arr[i];
+        if (arr[i] > maxElement) maxElement = arr[i];
     }
     return maxElement;
 }
-double FindMinElement(double[]arr)
+double FindMinElement(double[] arr)
 {
-    int i = 0;
-    double minElement= arr[i];
-    for(i=1; i<arr.Length; i++)
+    double minElement = arr[0];
+    for (int i = 1; i < arr.Length; i++)
     {
-        if (arr[i]< minElement) minElement = arr[i];
+        if (arr[i] < minElement) minElement = arr[i];
     }
     return minElement;
 }
 double FindDifference(double minNumber, double maxNumber)
 {
-   double dif = maxNumber - minNumber;
-   return dif;
+    double dif = maxNumber - minNumber;
+    return dif;
 }
 double[] array = CreateArrayRndDouble(5, 2, 9);
 double max = FindMaxElement(array);
