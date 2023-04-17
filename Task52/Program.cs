@@ -34,7 +34,7 @@ void PrintArrayDouble(double[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if (i < arr.Length - 1) Console.Write($"{Math.Round(arr[i], 2, MidpointRounding.ToZero)},  ");
+        if (i < arr.Length - 1) Console.Write($"{Math.Round(arr[i], 2, MidpointRounding.ToZero)};  ");
         else Console.Write($"{Math.Round(arr[i], 2, MidpointRounding.ToZero)}");
     }
     Console.Write("]");
