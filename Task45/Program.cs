@@ -22,15 +22,15 @@ void PrintArray(int[] arr)
 }
 int[] CopyArray(int[] arr)
 {
-    int [] resultArray = new int[arr.Length];
-    for(int i = 0; i<arr.Length;i++)
+    int[] resultArray = new int[arr.Length];
+    for (int i = 0; i < arr.Length; i++)
     {
         resultArray[i] = arr[i];
     }
     return resultArray;
 }
 
-int [] array = CreateArrayRndInt(5, 1, 9);
+int[] array = CreateArrayRndInt(5, 1, 9);
 PrintArray(array);
 int[] newCopyArray = CopyArray(array);
 Console.WriteLine();

@@ -26,10 +26,10 @@ int DecToBin(int number)
 string DecToBinStr(int number)
 {
     string temp = string.Empty;
-    while(number!=0)
+    while (number != 0)
     {
-        temp=number%2+temp;
-        number/=2;
+        temp = number % 2 + temp;
+        number /= 2;
     }
     return temp;
 }

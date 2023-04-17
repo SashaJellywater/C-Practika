@@ -37,7 +37,7 @@ void PrintMatrix(int[,] arr)
 }
 bool IsElementExist(int[,] matrix, int rowIndex, int columnIndex)
 {
-    if (rowIndex<matrix.GetLength(0) && columnIndex< matrix.GetLength(1))return true;
+    if (rowIndex < matrix.GetLength(0) && columnIndex < matrix.GetLength(1)) return true;
     else return false;
 }
 // int userRow = Prompt("Введите количество строк массива - ");
@@ -49,5 +49,5 @@ int[,] newArray = CreateMatrixRndInt(6, 5, -5, 5);
 PrintMatrix(newArray);
 int firstIndex = Prompt("Введите позицию строки - ");
 int secondIndex = Prompt("Введите позицию столбца - ");
-bool result = IsElementExist(newArray,firstIndex,secondIndex);
-Console.WriteLine(result?$"Элемент массива на позиции [{firstIndex},{secondIndex}] = {newArray[firstIndex,secondIndex]}" :"Нет элемента с заданной позицией.");
+bool result = IsElementExist(newArray, firstIndex, secondIndex);
+Console.WriteLine(result ? $"Элемент массива на позиции [{firstIndex},{secondIndex}] = {newArray[firstIndex, secondIndex]}" : "Нет элемента с заданной позицией.");

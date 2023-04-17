@@ -15,4 +15,4 @@ int firstSide = Prompt("Введите длину первой стороны - 
 int secondSide = Prompt("Введите длину второй стороны - ");
 int thirdSide = Prompt("Введите длину третьей стороны - ");
 bool result = IsTriangleReal(firstSide, secondSide, thirdSide);
-Console.WriteLine(result? "Такой треугольник существовать не может.":"Такой треугольник может существовать.");
+Console.WriteLine(result ? "Такой треугольник существовать не может." : "Такой треугольник может существовать.");

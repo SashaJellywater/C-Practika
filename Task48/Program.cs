@@ -18,7 +18,7 @@ int[,] CreateMatrixInt(int rows, int columns)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = i+j;
+            matrix[i, j] = i + j;
         }
     }
     return matrix;
@@ -31,11 +31,11 @@ void PrintMatrix(int[,] matrix)
         {
             Console.Write($"{matrix[i, j],4}");
         }
-       Console.WriteLine();
+        Console.WriteLine();
     }
 }
 
 int userRows = Prompt("Задайте количество строк массива");
 int userColumns = Prompt("Задайте количество столбцов массива");
-int[,] result = CreateMatrixInt(userRows,userColumns);
+int[,] result = CreateMatrixInt(userRows, userColumns);
 PrintMatrix(result);

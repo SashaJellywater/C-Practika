@@ -30,15 +30,15 @@ void PrintArray(int[] arr)
 int HowMachNumbers(int[] arr)
 {
     int count = 0;
-    for(int i = 0; i<arr.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i]>0) count+=1;
+        if (arr[i] > 0) count += 1;
     }
     return count;
 }
 
 int userSize = Prompt("Введите количество элементов массива - ");
-int [] array = CreateUserArray(userSize);
+int[] array = CreateUserArray(userSize);
 int result = HowMachNumbers(array);
 PrintArray(array);
 Console.Write($" -> {result}");
