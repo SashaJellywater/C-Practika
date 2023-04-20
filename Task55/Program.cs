@@ -3,6 +3,51 @@
 // невозможно, программа должна вывести сообщение для
 // пользователя.
 
+// int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
+// {
+//     int[,] arr = new int[rows, columns];
+//     Random rnd = new Random();
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             arr[i, j] = rnd.Next(min, max);
+//         }
+//     }
+//     return arr;
+// }
+// void PrintMatrix(int[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j],4}");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// int[,] ReplaceElementMatrix(int[,] matrix)
+// {
+//     int[,] resultMatrix = new int[matrix.GetLength(1), matrix.GetLength(0)];
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1); j++)
+//         {
+//             resultMatrix[j, i] = matrix[i, j];
+//         }
+//     }
+//     return resultMatrix;
+// }
+
+// int[,] userMatrix = CreateMatrixRndInt(3, 4, 1, 100);
+// Console.WriteLine("исходный массив");
+// PrintMatrix(userMatrix);
+// Console.WriteLine("изменённый массив");
+// int[,] result = ReplaceElementMatrix(userMatrix);
+// PrintMatrix(result);
+
+
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] arr = new int[rows, columns];
@@ -27,22 +72,29 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-int[,] ReplaceElementMatrix(int[,]matrix)
-{   
-    int[,] resultMatrix = new int [matrix.GetLength(1),matrix.GetLength(0)];
-     for (int i = 0; i < matrix.GetLength(0); i++)
+bool IsMatrixQuatro(int[,] matrix)
+{
+    if (matrix.GetLength(0)== matrix.GetLength(1)) return true;
+    else return false;
+}
+int[,] ReplaceElementMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            resultMatrix[j,i] = matrix[i,j];
+            int temp = matrix [i,j];
+            matrix[i, j] = matrix[j,i];
         }
-}
-return resultMatrix;
+    }
+    return matrix;
 }
 
-int[,] userMatrix = CreateMatrixRndInt(3, 4, 1, 100);
+int[,] userMatrix = CreateMatrixRndInt(4, 4, 1, 100);
 Console.WriteLine("исходный массив");
 PrintMatrix(userMatrix);
-Console.WriteLine("изменённый массив");
-int[,] result = ReplaceElementMatrix(userMatrix);
-PrintMatrix(result);
+bool result = IsMatrixQuatro(userMatrix);
+result?ReplaceElementMatrix(userMatrix): Console.WriteLine("невозможно изменить");
+
+
+

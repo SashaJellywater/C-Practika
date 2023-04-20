@@ -28,15 +28,15 @@ void PrintMatrix(int[,] arr)
 void ChangePlace(int[,] matrix)
 {
     int firstRow = 0;
-    int lastRow = matrix.GetLength(0)-1;
-    for(int i=0; i<matrix.GetLength(1); i++)
+    int lastRow = matrix.GetLength(0) - 1;
+    for (int i = 0; i < matrix.GetLength(1); i++)
     {
-        int temp = matrix[firstRow,i];
-        matrix[firstRow,i] = matrix[lastRow,i];
-        matrix[lastRow,i] = temp;
+        int temp = matrix[firstRow, i];
+        matrix[firstRow, i] = matrix[lastRow, i];
+        matrix[lastRow, i] = temp;
     }
 }
-int[,] newMatrix = CreateMatrixRndInt(4,4,1,100);
+int[,] newMatrix = CreateMatrixRndInt(4, 4, 1, 100);
 PrintMatrix(newMatrix);
 ChangePlace(newMatrix);
 Console.WriteLine("изменённый массив");

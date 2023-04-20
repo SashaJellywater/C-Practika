@@ -37,7 +37,7 @@ void PrintMatrix(int[,] arr)
 }
 bool IsElementExist(int[,] matrix, int rowIndex, int columnIndex)
 {
-    if (rowIndex < matrix.GetLength(0) && columnIndex < matrix.GetLength(1)) return true;
+    if (0 <= rowIndex && rowIndex < matrix.GetLength(0) && 0 <= columnIndex && columnIndex < matrix.GetLength(1)) return true;
     else return false;
 }
 // int userRow = Prompt("Введите количество строк массива - ");
