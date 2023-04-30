@@ -3,6 +3,7 @@
 // невозможно, программа должна вывести сообщение для
 // пользователя.
 
+//  универсальное решение
 // int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 // {
 //     int[,] arr = new int[rows, columns];
@@ -47,7 +48,7 @@
 // int[,] result = ReplaceElementMatrix(userMatrix);
 // PrintMatrix(result);
 
-
+// Решение только для квадратных массивов
 int[,] CreateMatrixRndInt(int rows, int columns, int min, int max)
 {
     int[,] arr = new int[rows, columns];
@@ -74,7 +75,7 @@ void PrintMatrix(int[,] arr)
 }
 bool IsMatrixQuatro(int[,] matrix)
 {
-    if (matrix.GetLength(0)== matrix.GetLength(1)) return true;
+    if (matrix.GetLength(0) == matrix.GetLength(1)) return true;
     else return false;
 }
 int[,] ReplaceElementMatrix(int[,] matrix)
@@ -83,18 +84,22 @@ int[,] ReplaceElementMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            int temp = matrix [i,j];
-            matrix[i, j] = matrix[j,i];
+            int temp = matrix[i, j];
+            matrix[i, j] = matrix[j, i];
         }
     }
     return matrix;
 }
 
-int[,] userMatrix = CreateMatrixRndInt(4, 4, 1, 100);
+int[,] userMatrix = CreateMatrixRndInt(5, 5, 1, 100);
 Console.WriteLine("исходный массив");
 PrintMatrix(userMatrix);
 bool result = IsMatrixQuatro(userMatrix);
-result?ReplaceElementMatrix(userMatrix): Console.WriteLine("невозможно изменить");
-
-
-
+if (result == true)
+{
+    ReplaceElementMatrix(userMatrix);
+    Console.WriteLine("изменённый массив");
+    PrintMatrix(userMatrix);
+}
+else
+    Console.WriteLine("невозможно изменить массив");

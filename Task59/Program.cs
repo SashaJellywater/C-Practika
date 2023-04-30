@@ -37,34 +37,34 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-int[] MinElementOfMatrix(int[,]matrix)
+int[] MinElementOfMatrix(int[,] matrix)
 {
-    int[] index= new int[]{0,0};
-       for (int i = 0; i < matrix.GetLength(0); i++)
+    int[] index = new int[] { 0, 0 };
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-           if(matrix[i,j]<matrix[index[0], index[1]])
-           {
-            index[0] = i;
-            index[1] = j;
-           }
+            if (matrix[i, j] < matrix[index[0], index[1]])
+            {
+                index[0] = i;
+                index[1] = j;
+            }
         }
     }
     return index;
 }
-int[,] RemoveRowColMinElement(int[,]matrix, int[]arr)
+int[,] RemoveRowColMinElement(int[,] matrix, int[] arr)
 {
-    int[,] newMatrix = new int [matrix.GetLength(0)-1,matrix.GetLength(1)-1];
+    int[,] newMatrix = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
     int m = 0;
     int n = 0;
     for (int i = 0; i < newMatrix.GetLength(0); i++)
     {
-        if(m==arr[0]) m++;
+        if (m == arr[0]) m++;
         for (int j = 0; j < newMatrix.GetLength(1); j++)
         {
-           if( n == arr[1]) n++;
-            newMatrix[i,j] = matrix[m,n];
+            if (n == arr[1]) n++;
+            newMatrix[i, j] = matrix[m, n];
             n++;
         }
         m++;
@@ -73,7 +73,7 @@ int[,] RemoveRowColMinElement(int[,]matrix, int[]arr)
     return newMatrix;
 }
 
-int[,] userMatrix = CreateMatrixRndInt(4,4,1,10);
+int[,] userMatrix = CreateMatrixRndInt(4, 4, 1, 10);
 PrintMatrix(userMatrix);
 Console.WriteLine();
 int[] indexArray = MinElementOfMatrix(userMatrix);

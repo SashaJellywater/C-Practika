@@ -52,7 +52,7 @@ void SortMatrix(int[,] matrix)
     }
 }
 
-int[,] newMatrix = CreateMatrixRndInt(3, 7, 1, 10);
+int[,] newMatrix = CreateMatrixRndInt(3, 7, -10, 10);
 Console.WriteLine("Исходный массив: ");
 PrintMatrix(newMatrix);
 SortMatrix(newMatrix);

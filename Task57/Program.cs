@@ -27,15 +27,15 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-int[] MatrixInArray(int[,]matrix)
+int[] MatrixInArray(int[,] matrix)
 {
-    int[] resultArray = new int [matrix.Length];
+    int[] resultArray = new int[matrix.Length];
     int k = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            resultArray[k] = matrix[i,j];
+            resultArray[k] = matrix[i, j];
             k++;
         }
     }
@@ -51,24 +51,24 @@ void PrintArray(int[] arr)
     }
     Console.WriteLine("]");
 }
-void DictionaryArrayElement(int[]arr)
+void DictionaryArrayElement(int[] arr)
 {
     int count = 1;
     int currentNumb = arr[0];
-    for(int i = 1; i<arr.Length; i++)
+    for (int i = 1; i < arr.Length; i++)
     {
         if (arr[i] == currentNumb) count++;
-        else 
+        else
         {
             Console.WriteLine($" Число {currentNumb} встречается {count} раз.");
-            currentNumb= arr[i];
-            count =1;
+            currentNumb = arr[i];
+            count = 1;
         }
     }
- Console.WriteLine($" Число {currentNumb} встречается {count} раз.");
+    Console.WriteLine($" Число {currentNumb} встречается {count} раз.");
 }
 
-int[,] userMatrix = CreateMatrixRndInt(4,5,1,10);
+int[,] userMatrix = CreateMatrixRndInt(4, 5, 1, 10);
 PrintMatrix(userMatrix);
 Console.WriteLine();
 int[] newArray = MatrixInArray(userMatrix);
