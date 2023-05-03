@@ -5,7 +5,11 @@
 // 34(1,0,0) 41(1,1,0)
 // 27(0,0,1) 90(0,1,1)
 // 26(1,0,1) 55(1,1,1)
-
+bool IsMatrixCorrect(int[,,]matrix)
+{
+    if (matrix.GetLength(0)*matrix.GetLength(1)*matrix.GetLength(2)<=90) return true;
+    else return false;
+}
 void PrintMatrix(int[,,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -62,5 +66,7 @@ int[,,] CreateMatrixRndInt(int row, int column, int depth, int min, int max)
     }
     return mat;
 }
-int[,,] array = CreateMatrixRndInt(2, 2, 2, 10, 100);
-PrintMatrix(array);
+int[,,] array = CreateMatrixRndInt(4, 3, 4, 10, 100);
+bool result = IsMatrixCorrect(array);
+if(result==true) PrintMatrix(array);
+else Console.WriteLine("Невозможно создать массив такого размера из неповторяющихся двузначных чисел");
