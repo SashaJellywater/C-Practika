@@ -4,7 +4,7 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
-int[,] CreateMatrixRndInt(int rows, int columns)
+// int[,] CreateMatrixRndInt(int rows, int columns)
 
     // mat[0, 0] = min;
     // mat[0, 1] = min + 1;
